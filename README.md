@@ -79,6 +79,26 @@ Command: nmap 192.38.82.3 -p 445,139 -sV
 <br />
 <br />
 <br />
+Run Nmap scan that will enumerate open UDP ports: <br/>
+<br/>
+- The past Nmap scans were for tcp ports. I will now run an Nmap scan that will look for open UDP ports. This can be done by adding -sU to the command so that Nmap will specifically target open UDP ports.
+<br/>
+- UDP port scans usually take a long time, so I'll add --top-ports 25 in order to scan the top 25 ports so that the scan can be a bit faster for the purpose of the lab. --open means that the Nmap command will only enumerate open ports and not closed ports.
+<br/>
+- We can see that UDP port 137 is open, and it's version is Samba nmbd.
+<br/>
+<br/>
+Command: nmap 192.38.82.3 -sU --top-port 25 --open -sV
+<br/>
+<br/>
+<img src="https://i.imgur.com/aqGUO8Q.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 </p>
