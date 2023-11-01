@@ -139,6 +139,44 @@ exploit
 <br />
 <br />
 <br />
+Run nmblookup to find the NetBIOS computer name of Samba server: <br/>
+<br/>
+- nmblookup is used to query NetBIOS names and map them to IP addresses in a network using NetBIOS over TCP/IP queries.
+<br/>
+- The nmblookup command can display the hostname, workgroup and MAC address of the given IP address.
+<br/>
+- We can see that the computer name of the Samba server is SAMBA-RECON. The number 20 next the the NetBIOS name means that there is a Samba server that can be connected to.
+<br/>
+<br/>
+Command:  nmblookup -A 192.38.82.3
+<br/>
+<br/>
+<img src="https://i.imgur.com/IZHAhQW.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+Utilize the smbclient tool to verify if it is possible to connect to the Samba server: <br/>
+<br/>
+- The command below will check if a null session (-N) is possible on the Samba server. 
+<br/>
+- We can see that the command indeed enumerated a list of sharenames with IPC$ being one of them. This means that the Samba server does in fact allow null sessions.
+<br/>
+<br/>
+Command:  smbclient -L 192.38.82.3 -N
+<br/>
+<br/>
+<img src="https://i.imgur.com/8eNrCbT.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 </p>
