@@ -177,6 +177,22 @@ Command:  smbclient -L 192.38.82.3 -N
 <br />
 <br />
 <br />
+Use the rpcclient tool to verify if it is possible to connect anonymously to the Samba server: <br/>
+<br/>
+- Since the command below didn't throw any errors and let me connect, this means that I was able to log into the Samba server anonymously (null session).
+<br/>
+<br/>
+Command:  rpcclient -U "" -N 192.38.82.3
+<br/>
+<br/>
+<img src="https://i.imgur.com/nyAaDpb.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 </p>
