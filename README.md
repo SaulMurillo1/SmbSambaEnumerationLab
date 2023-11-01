@@ -52,7 +52,7 @@ Run Nmap scan on target machine to try to find open ports: <br/>
 - We can see that port 445 (SMB) and 139 are open.
 <br/>
 <br/>
-Commands: nmap 192.38.82.3
+Command: nmap 192.38.82.3
 <br/>
 <br/>
 <img src="https://i.imgur.com/NrI3Get.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
@@ -68,7 +68,7 @@ Run Nmap scan that will enumerate further details for ports 445 & 139: <br/>
 - We can now see the version that port 139 & 445 are running.  It looks like some version of Samba 3.x - 4.x is running for these open ports.
 <br/>
 <br/>
-Commands: nmap 192.38.82.3 -p 445,139 -sV
+Command: nmap 192.38.82.3 -p 445,139 -sV
 <br/>
 <br/>
 <img src="https://i.imgur.com/2capKNz.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
