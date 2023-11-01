@@ -99,6 +99,46 @@ Command: nmap 192.38.82.3 -sU --top-port 25 --open -sV
 <br />
 <br />
 <br />
+Run msfconsole (Metasploit Framework Console) to use as enumeration tool: <br/>
+<br/>
+- We will use the Metasploit Framework Console tool to enumerate the actual Samba version.
+<br/>
+<br/>
+Command: msfconsole
+<br/>
+<br/>
+<img src="https://i.imgur.com/x9ihQ8l.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+Run msfconsole (Metasploit Framework Console) to enumerate SMB version of the target machine: <br/>
+<br/>
+- While using the msfconsole tool, you can use the show options command as a way to get help with which commands can be used.
+<br/>
+- We can see the RHOSTS change to the target machine in the screenshot down below. Once I set the target host, I was able to use the command exploit to begin enumeration.
+<br/>
+- It looks like the SMB version of the target machine is Samba 4.3.11-Ubuntu.
+<br/>
+<br/>
+Commands:  use auxiliary/scanner/smb/smb_version
+<br/>
+set rhosts 192.38.82.3
+<br/>
+exploit
+<br/>
+<br/>
+<img src="https://i.imgur.com/Ei1Nyt2.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 </p>
